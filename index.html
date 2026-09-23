@@ -1,86 +1,552 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>CV - Ahmad Al-Muqry Zahib</title>
-    <style>.profile {
-            width: 160px;
-            height: 160px;
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* =========================
+           BODY
+        ========================= */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #e5e5e5;
+            color: #111;
+            line-height: 1.4;
+        }
+
+
+        /* =========================
+           CONTAINER CV
+        ========================= */
+        .cv-container {
+            width: 210mm;
+            margin: 25px auto;
+        }
+
+
+        /* =========================
+           HALAMAN CV
+        ========================= */
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 15mm 18mm;
+            margin-bottom: 25px;
+            background: white;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            border-bottom: 2px solid #111;
+
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+
+        .header-text {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+
+        h1 {
+            font-size: 25px;
+            line-height: 1.2;
+            margin-bottom: 7px;
+            font-weight: 700;
+        }
+
+
+        .subtitle {
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+
+        .contact {
+            font-size: 11px;
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           FOTO PROFILE
+        ========================= */
+        .photo-frame {
+            width: 150px;
+            height: 180px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+
+        .profile-photo {
+            width: 170px;
+            height: 200px;
+
             object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid #222;
-            margin: 0 auto 15px auto;
+
             display: block;
-        }</style>
+
+            transform: translate(-10px, -10px);
+        }
+
+
+        /* =========================
+           SECTION
+        ========================= */
+        section {
+            margin-bottom: 19px;
+        }
+
+
+        .section-title {
+            font-size: 14px;
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            border-bottom: 1px solid #111;
+
+            padding-bottom: 4px;
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================
+           PARAGRAPH
+        ========================= */
+        p {
+            font-size: 11.5px;
+            text-align: justify;
+        }
+
+
+        /* =========================
+           ITEM
+        ========================= */
+        .education-item,
+        .experience-item {
+            margin-bottom: 12px;
+        }
+
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+
+            gap: 15px;
+
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+
+        .date {
+            white-space: nowrap;
+
+            font-size: 11px;
+            font-weight: 400;
+        }
+
+
+        .item-subtitle {
+            font-size: 11px;
+
+            font-style: italic;
+
+            margin: 2px 0 4px;
+        }
+
+
+        /* =========================
+           LIST
+        ========================= */
+        ul {
+            padding-left: 17px;
+            margin-top: 4px;
+        }
+
+
+        li {
+            font-size: 11px;
+
+            margin-bottom: 3px;
+
+            text-align: justify;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================= */
+        .skill-list {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 8px 25px;
+        }
+
+
+        .skill-item {
+            font-size: 11.5px;
+        }
+
+
+        /* =========================
+           GARIS PEMISAH
+        ========================= */
+        hr {
+            border: none;
+
+            border-top: 1px solid #111;
+
+            margin: 15px 0;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+        @media screen and (max-width: 800px) {
+
+            body {
+                background: #fff;
+            }
+
+            .cv-container {
+                width: 100%;
+                margin: 0;
+            }
+
+            .page {
+                width: 100%;
+                min-height: 297mm;
+
+                padding: 25px;
+
+                margin-bottom: 20px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            .photo-frame {
+                width: 115px;
+                height: 145px;
+            }
+
+            .profile-photo {
+                width: 135px;
+                height: 165px;
+
+                transform: translate(-10px, -10px);
+            }
+
+            .item-header {
+                flex-direction: column;
+
+                gap: 2px;
+            }
+
+            .date {
+                white-space: normal;
+            }
+        }
+
+
+        /* =========================
+           PRINT / CETAK
+        ========================= */
+        @media print {
+
+            @page {
+                size: A4;
+                margin: 0;
+            }
+
+            body {
+                background: white;
+                margin: 0;
+            }
+
+            .cv-container {
+                width: 210mm;
+                margin: 0;
+            }
+
+            .page {
+                width: 210mm;
+                min-height: 297mm;
+
+                margin: 0;
+
+                padding: 15mm 18mm;
+            }
+        }
+
+    </style>
+
 </head>
+
+
 <body>
 
-    <!-- HEADER -->
-    <h1 style="text-align: center;">Ahmad Al-Muqry Zahib</h1>
-    <img class="profile" src="pendek.jpeg" alt="">
-    <h3 style="text-align: center;">S1 SISTEM INFORMASI</h3>
-    <p style="text-align: center;">
-        | Kost Flamboyan 45 jl. Kayumanis VIII Gang Sengon IV Matraman jakarta pusat | 
- 
+    <main class="cv-container">
 
-    <hr>
+        <section class="page">
 
-    <!-- ABOUT ME -->
-    <p>
-        Mahasiswa aktif S1 Sistem Informasi di Telkom University
-        Jakarta yang komunikatif, disiplin, dan memiliki ketertarikan
-        besar untuk berkarier paruh waktu (part-time) di bidang food
-        & beverage (F&B) atau pelayanan pelanggan (hospitality).
-        Memiliki latar belakang pendidikan yang melatih
-        kemampuan berpikir terstruktur, adaptasi teknologi yang
-        cepat, serta ketelitian tinggi. Didukung dengan pengalaman
-        kerja nyata dalam operasional dapur (baking), pelayanan
-        langsung (customer service), serta manajemen logistik
-        lapangan. Melalui profesi sebagai pelatih renang anak-anak,
-        saya juga telah mengasah kecerdasan emosional yang kuat,
-        ketenangan di bawah tekanan, serta kemampuan
-        komunikasi yang ramah. Saya siap memberikan dedikasi dan
-        pelayanan terbaik demi menjaga kepuasan pelanggan serta
-        kelancaran operasional tim.
-    <hr>
+            <!-- =========================
+                 HEADER
+            ========================== -->
 
-    <!-- HARD SKILLS & SOFT SKILLS -->
-    <h2>HARD SKILLS & SOFT SKILLS</h2>
-    <ul>
-        <li>Food Prep & Baking: Mengolah makanan,
-        menakar resep, dan menggunakan mesin
-        oven.</li>
+            <header>
 
-        <li>Microsoft Office: Mahir menggunakan Excel,
-            Word, dan PowerPoint untuk administrasi.</li>
+                <div class="header-text">
 
-        <li>Emotional Regulation: Tetap tenang, sabar,
-            dan solutif di bawah tekanan atau komplain.</li>
+                    <h1>
+                        Ahmad Al-Muqry Zahib
+                    </h1>
 
-        <li>Adaptability: Cepat belajar sistem kerja,
-            menu, atau teknologi baru.</li>
+                    <div class="subtitle">
+                        S1 SISTEM INFORMASI
+                    </div>
 
-        <li>Time Management: Disiplin membagi waktu
-            antara kuliah S1 dan kerja part-time.</li>
-    </ul>
+                    <div class="contact">
+                        Kost Flamboyan 45,
+                        Jl. Kayumanis VIII Gang Sengon IV,
+                        Matraman, Jakarta Pusat
+                    </div>
 
-    <hr>
-
-    <!-- Education & Lisence -->
-    <h2>Education & Lisence</h2>
-    
-    <h3>Telkom University Jakarta</h3>
-    <p>S1 Sistem Informasi (September 2025 - sekarang)</p>
-
-    <h3> Swimming Coach Lisence (Cimahi) </h3>
-    <p>Akuatik Indonesia - 29 - 30 November 2024</p>
-
-    <hr>
+                </div>
 
 
-    <!-- Work Experience -->
-    <h2>Work Experience</h2>
-    <h3>Pelatih (Coach) Renang & Event Organizer Internal.</h3>
-    <p>Melatih teknik berenang anak usia 3–4 tahun dari tingkat dasar hingga lanjut dengan fokus pada keselamatan, kenyamanan, dan perkembangan kemampuan peserta. Berpengalaman memimpin perencanaan acara 17 Agustus serta menangani kebutuhan logistik dalam kompetisi renang.</p>
+                <!-- FOTO -->
+
+                <div class="photo-frame">
+
+                    <img
+                        src="pendek.jpeg"
+                        alt="Foto Ahmad Al-Muqry Zahib"
+                        class="profile-photo"
+                    >
+
+                </div>
+
+            </header>
+
+
+            <!-- =========================
+                 ABOUT ME
+            ========================== -->
+
+            <section>
+
+                <h2 class="section-title">
+                    About Me
+                </h2>
+
+                <p>
+                    Mahasiswa aktif S1 Sistem Informasi di Telkom University
+                    Jakarta yang komunikatif, disiplin, dan memiliki ketertarikan
+                    besar untuk berkarier paruh waktu (part-time) di bidang food
+                    & beverage (F&B) atau pelayanan pelanggan (hospitality).
+                    Memiliki latar belakang pendidikan yang melatih kemampuan
+                    berpikir terstruktur, adaptasi teknologi yang cepat, serta
+                    ketelitian tinggi. Didukung dengan pengalaman kerja nyata
+                    dalam operasional dapur (baking), pelayanan langsung
+                    (customer service), serta manajemen logistik lapangan.
+                    Melalui profesi sebagai pelatih renang anak-anak, saya juga
+                    telah mengasah kecerdasan emosional yang kuat, ketenangan
+                    di bawah tekanan, serta kemampuan komunikasi yang ramah.
+                    Saya siap memberikan dedikasi dan pelayanan terbaik demi
+                    menjaga kepuasan pelanggan serta kelancaran operasional tim.
+                </p>
+
+            </section>
+
+
+            <!-- =========================
+                 SKILLS
+            ========================== -->
+
+            <section>
+
+                <h2 class="section-title">
+                    Hard Skills & Soft Skills
+                </h2>
+
+                <div class="skill-list">
+
+                    <div class="skill-item">
+                        <strong>Food Prep & Baking</strong><br>
+                        Mengolah makanan, menakar resep,
+                        dan menggunakan mesin oven.
+                    </div>
+
+                    <div class="skill-item">
+                        <strong>Microsoft Office</strong><br>
+                        Mahir menggunakan Excel, Word,
+                        dan PowerPoint untuk administrasi.
+                    </div>
+
+                    <div class="skill-item">
+                        <strong>Emotional Regulation</strong><br>
+                        Tetap tenang, sabar, dan solutif
+                        di bawah tekanan atau komplain.
+                    </div>
+
+                    <div class="skill-item">
+                        <strong>Adaptability</strong><br>
+                        Cepat belajar sistem kerja,
+                        menu, atau teknologi baru.
+                    </div>
+
+                    <div class="skill-item">
+                        <strong>Time Management</strong><br>
+                        Disiplin membagi waktu antara
+                        kuliah S1 dan kerja part-time.
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 EDUCATION
+            ========================== -->
+
+            <section>
+
+                <h2 class="section-title">
+                    Education & License
+                </h2>
+
+
+                <div class="education-item">
+
+                    <div class="item-header">
+
+                        <span>
+                            Telkom University Jakarta
+                        </span>
+
+                        <span class="date">
+                            2025 - Sekarang
+                        </span>
+
+                    </div>
+
+                    <div class="item-subtitle">
+                        S1 Sistem Informasi
+                    </div>
+
+                </div>
+
+
+                <div class="education-item">
+
+                    <div class="item-header">
+
+                        <span>
+                            Swimming Coach License (Cimahi)
+                        </span>
+
+                        <span class="date">
+                            2024
+                        </span>
+
+                    </div>
+
+                    <div class="item-subtitle">
+                        Akuatik Indonesia
+                    </div>
+
+                    <p>
+                        29 - 30 November 2024
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 WORK EXPERIENCE
+            ========================== -->
+
+            <section>
+
+                <h2 class="section-title">
+                    Work Experience
+                </h2>
+
+
+                <div class="experience-item">
+
+                    <div class="item-header">
+
+                        <span>
+                            Pelatih (Coach) Renang &
+                            Event Organizer Internal
+                        </span>
+
+                        <span class="date">
+                            2024 - Sekarang
+                        </span>
+
+                    </div>
+
+
+                    <div class="item-subtitle">
+                        Swimming Coach & Event Organizer
+                    </div>
+
+
+                    <p>
+                        Melatih teknik berenang anak usia 3–4 tahun dari
+                        tingkat dasar hingga lanjut dengan fokus pada
+                        keselamatan, kenyamanan, dan perkembangan kemampuan
+                        peserta. Berpengalaman memimpin perencanaan acara
+                        17 Agustus serta menangani kebutuhan logistik dalam
+                        kompetisi renang.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+        </section>
+
+    </main>
 
 </body>
+
 </html>
