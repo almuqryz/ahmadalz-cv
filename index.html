@@ -18,7 +18,6 @@
             box-sizing: border-box;
         }
 
-
         /* =========================
            BODY
         ========================= */
@@ -29,7 +28,6 @@
             line-height: 1.4;
         }
 
-
         /* =========================
            CONTAINER CV
         ========================= */
@@ -37,7 +35,6 @@
             width: 210mm;
             margin: 25px auto;
         }
-
 
         /* =========================
            HALAMAN CV
@@ -49,7 +46,6 @@
             margin-bottom: 25px;
             background: white;
         }
-
 
         /* =========================
            HEADER
@@ -65,12 +61,10 @@
             margin-bottom: 20px;
         }
 
-
         .header-text {
             flex: 1;
             padding-right: 20px;
         }
-
 
         h1 {
             font-size: 25px;
@@ -79,18 +73,15 @@
             font-weight: 700;
         }
 
-
         .subtitle {
             font-size: 14px;
             margin-bottom: 12px;
         }
 
-
         .contact {
             font-size: 11px;
             line-height: 1.8;
         }
-
 
         /* =========================
            FOTO PROFILE
@@ -102,18 +93,13 @@
             flex-shrink: 0;
         }
 
-
         .profile-photo {
-            width: 170px;
-            height: 200px;
-
+            width: 100%;
+            height: 100%;
             object-fit: cover;
-
+            object-position: center top;
             display: block;
-
-            transform: translate(-10px, -10px);
         }
-
 
         /* =========================
            SECTION
@@ -122,11 +108,9 @@
             margin-bottom: 19px;
         }
 
-
         .section-title {
             font-size: 14px;
             font-weight: 700;
-
             text-transform: uppercase;
 
             border-bottom: 1px solid #111;
@@ -134,7 +118,6 @@
             padding-bottom: 4px;
             margin-bottom: 10px;
         }
-
 
         /* =========================
            PARAGRAPH
@@ -144,90 +127,47 @@
             text-align: justify;
         }
 
-
         /* =========================
-           ITEM
+           EDUCATION & EXPERIENCE
         ========================= */
         .education-item,
         .experience-item {
             margin-bottom: 12px;
         }
 
-
         .item-header {
             display: flex;
             justify-content: space-between;
-
             gap: 15px;
 
             font-size: 12px;
             font-weight: 700;
         }
 
-
         .date {
             white-space: nowrap;
-
             font-size: 11px;
             font-weight: 400;
         }
 
-
         .item-subtitle {
             font-size: 11px;
-
             font-style: italic;
-
             margin: 2px 0 4px;
         }
-
-
-        /* =========================
-           LIST
-        ========================= */
-        ul {
-            padding-left: 17px;
-            margin-top: 4px;
-        }
-
-
-        li {
-            font-size: 11px;
-
-            margin-bottom: 3px;
-
-            text-align: justify;
-        }
-
 
         /* =========================
            SKILLS
         ========================= */
         .skill-list {
             display: grid;
-
             grid-template-columns: 1fr 1fr;
-
             gap: 8px 25px;
         }
-
 
         .skill-item {
             font-size: 11.5px;
         }
-
-
-        /* =========================
-           GARIS PEMISAH
-        ========================= */
-        hr {
-            border: none;
-
-            border-top: 1px solid #111;
-
-            margin: 15px 0;
-        }
-
 
         /* =========================
            RESPONSIVE
@@ -246,9 +186,7 @@
             .page {
                 width: 100%;
                 min-height: 297mm;
-
                 padding: 25px;
-
                 margin-bottom: 20px;
             }
 
@@ -261,16 +199,8 @@
                 height: 145px;
             }
 
-            .profile-photo {
-                width: 135px;
-                height: 165px;
-
-                transform: translate(-10px, -10px);
-            }
-
             .item-header {
                 flex-direction: column;
-
                 gap: 2px;
             }
 
@@ -278,7 +208,6 @@
                 white-space: normal;
             }
         }
-
 
         /* =========================
            PRINT / CETAK
@@ -303,9 +232,7 @@
             .page {
                 width: 210mm;
                 min-height: 297mm;
-
                 margin: 0;
-
                 padding: 15mm 18mm;
             }
         }
@@ -346,13 +273,15 @@
                 </div>
 
 
-                <!-- FOTO -->
+                <!-- =========================
+                     FOTO PROFILE
+                ========================== -->
 
                 <div class="photo-frame">
 
                     <img
-                        src="f8310f64-fe63-4e44-a28c-36cc6dbdb4d5.jpeg"
-                        alt="Foto Ahmad Al-Muqry Zahib"
+                        src="foto-formal.jpeg"
+                        alt="Foto Profile Ahmad Al-Muqry Zahib"
                         class="profile-photo"
                     >
 
@@ -392,7 +321,7 @@
 
 
             <!-- =========================
-                 SKILLS
+                 HARD SKILLS & SOFT SKILLS
             ========================== -->
 
             <section>
@@ -439,7 +368,7 @@
 
 
             <!-- =========================
-                 EDUCATION
+                 EDUCATION & LICENSE
             ========================== -->
 
             <section>
@@ -458,7 +387,7 @@
                         </span>
 
                         <span class="date">
-                            2025 - Sekarang
+                            September 2025 - Sekarang
                         </span>
 
                     </div>
@@ -479,7 +408,7 @@
                         </span>
 
                         <span class="date">
-                            2024
+                            29 - 30 November 2024
                         </span>
 
                     </div>
@@ -487,10 +416,6 @@
                     <div class="item-subtitle">
                         Akuatik Indonesia
                     </div>
-
-                    <p>
-                        29 - 30 November 2024
-                    </p>
 
                 </div>
 
@@ -518,7 +443,7 @@
                         </span>
 
                         <span class="date">
-                            2024 - Sekarang
+                            September 2024 - Sekarang
                         </span>
 
                     </div>
